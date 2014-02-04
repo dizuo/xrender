@@ -1,0 +1,32 @@
+word="earlier",counter = 1
+word="Swedish",counter = 1 word="owing",counter = 1 word="isolation",counter = 1
+word="Proto-Germanic",counter = 1 word="relatives",counter = 1 word="develop",counter = 1 word="independently",counter = 1
+word="parts",counter = 1 word="afforded",counter = 1
+word="well",counter = 1
+word="use",counter = 1 word="from",counter = 1 word="British",counter = 1
+word="in",counter = 4 word="Frisian",counter = 2 word="those",counter = 1 word="With",counter = 1 word="partial",counter = 1 word="especially",counter = 1
+word="sub-group",counter = 1 word="of",counter = 16 word="family",counter = 1 word="verbs",counter = 2 word="as",counter = 4 word="divergences",counter = 1
+word="do",counter = 1
+word="common",counter = 1 word="Netherlands",counter = 1 word="German",counter = 2 word="time",counter = 1
+word="are",counter = 3 word="spoken",counter = 3
+word="Northern",counter = 1
+word="most",counter = 1 word="classes",counter = 1 word="syntax",counter = 1
+word="Law",counter = 1 word="Scots",counter = 5 word="Scotland",counter = 1 word="Germany",counter = 1
+word="on",counter = 1 word="such",counter = 1
+word="characterised",counter = 1 word="modal",counter = 1 word="After",counter = 1 word="that",counter = 1 word="with",counter = 2 word="some",counter = 1 word=
+"their",counter = 1 word="influences",counter = 1
+word="Sea",counter = 1 word="more",counter = 1 word="none",counter = 1
+word="Ireland",counter = 1 word="non-Anglo-Frisian",counter = 1 word="although",counter = 1
+word="Modern",counter = 1 word="known",counter = 1 word="Icelandic",counter = 2
+word="show",counter = 1 word="has",counter = 1
+word="Indo-European",counter = 1 word="division",counter = 1 word="Denmark",counter = 1 word="Isolation",counter = 1
+word="s",counter = 1 word="related",counter = 1 word="semantics",counter = 1
+word="distantly",counter = 1 word="stages",counter = 1
+word="Grimm",counter = 1 word="southern",counter = 1
+word="primarily",counter = 1 word="come",counter = 1 word="Norwegian",counter = 1 word="allowed",counter = 1
+word="Germanic",counter = 7 word="descendant",counter = 3 word="by",counter = 2
+word="weak",counter = 1 word="where",counter = 1 word="fringes",counter = 1 word="High",counter = 1
+word="Danish",counter = 1 word="other",counter = 1 word="intelligible",counter = 1 word="Isles",counter = 1
+word="mutually",counter = 1
+word="Old",counter = 1 word="exception",counter = 1 word="part",counter = 1 word="phonology",counter = 1 word="Continental",counter = 1
+word="Afrikaans",counter = 1 word="lexis",counter = 1 word="affinities",counter= 1

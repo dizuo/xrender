@@ -1,0 +1,300 @@
+09-05 13:10:06.230: I/tile(843): reset needDrawTiles
+09-05 13:10:06.230: I/tile(843): m=1, l=11, x=1687, y=1271
+09-05 13:10:06.420: I/tile(843): m=1, l=14, x=13496, y=10170
+09-05 13:10:06.450: I/tile(843): reset needDrawTiles
+09-05 13:10:06.470: I/tile(843): m=1, l=14, x=13495, y=10170
+09-05 13:10:06.510: I/tile(843): m=1, l=14, x=13497, y=10170
+09-05 13:10:06.530: I/tile(843): m=1, l=14, x=13496, y=10169
+09-05 13:10:06.550: I/tile(843): reset needDrawTiles
+09-05 13:10:06.550: I/tile(843): m=1, l=14, x=13496, y=10171
+09-05 13:10:06.580: I/tile(843): reset needDrawTiles
+09-05 13:10:06.580: I/tile(843): m=1, l=14, x=13495, y=10171
+09-05 13:10:06.590: I/tile(843): m=1, l=14, x=13497, y=10171
+09-05 13:10:06.600: I/tile(843): m=1, l=14, x=13496, y=10172
+09-05 13:10:06.620: I/tile(843): m=1, l=14, x=13495, y=10172
+09-05 13:10:06.660: I/tile(843): m=1, l=14, x=13497, y=10172
+09-05 13:10:06.660: I/tile(843): reset needDrawTiles
+09-05 13:10:06.670: I/tile(843): m=1, l=11, x=1686, y=1271
+09-05 13:10:06.670: I/tile(843): reset needDrawTiles
+09-05 13:10:06.730: I/tile(843): reset needDrawTiles
+09-05 13:10:06.730: I/tile(843): m=1, l=14, x=13494, y=10171
+09-05 13:10:06.740: I/tile(843): m=1, l=14, x=13494, y=10172
+09-05 13:10:06.740: I/tile(843): reset needDrawTiles
+09-05 13:10:06.760: I/tile(843): m=1, l=14, x=13493, y=10172
+09-05 13:10:06.760: I/tile(843): reset needDrawTiles
+09-05 13:10:06.770: I/tile(843): m=1, l=14, x=13494, y=10173
+09-05 13:10:06.770: I/tile(843): reset needDrawTiles
+09-05 13:10:06.780: I/tile(843): m=1, l=14, x=13493, y=10173
+09-05 13:10:06.790: I/tile(843): reset needDrawTiles
+09-05 13:10:06.810: I/tile(843): reset needDrawTiles
+09-05 13:10:06.820: I/tile(843): reset needDrawTiles
+09-05 13:10:06.820: I/tile(843): m=1, l=14, x=13490, y=10175
+09-05 13:10:06.860: I/tile(843): reset needDrawTiles
+09-05 13:10:06.860: I/tile(843): m=1, l=11, x=1686, y=1272
+09-05 13:10:06.860: I/tile(843): reset needDrawTiles
+09-05 13:10:06.880: I/tile(843): m=1, l=14, x=13489, y=10177
+09-05 13:10:06.890: I/tile(843): m=1, l=14, x=13488, y=10177
+09-05 13:10:06.900: I/tile(843): reset needDrawTiles
+09-05 13:10:06.920: I/tile(843): m=1, l=14, x=13487, y=10177
+09-05 13:10:06.920: I/tile(843): reset needDrawTiles
+09-05 13:10:06.940: I/tile(843): m=1, l=11, x=1685, y=1272
+09-05 13:10:06.940: I/tile(843): reset needDrawTiles
+09-05 13:10:06.960: I/tile(843): m=1, l=14, x=13487, y=10178
+09-05 13:10:06.970: I/tile(843): m=1, l=14, x=13486, y=10178
+09-05 13:10:06.970: I/tile(843): reset needDrawTiles
+09-05 13:10:06.980: I/tile(843): m=1, l=14, x=13486, y=10179
+09-05 13:10:06.980: I/tile(843): reset needDrawTiles
+09-05 13:10:07.000: I/tile(843): m=1, l=14, x=13485, y=10179
+09-05 13:10:07.010: I/tile(843): reset needDrawTiles
+09-05 13:10:07.020: I/tile(843): m=1, l=14, x=13484, y=10179
+09-05 13:10:07.020: I/tile(843): reset needDrawTiles
+09-05 13:10:07.040: I/tile(843): m=1, l=14, x=13485, y=10180
+09-05 13:10:07.040: I/tile(843): reset needDrawTiles
+09-05 13:10:07.060: I/tile(843): reset needDrawTiles
+09-05 13:10:07.060: I/tile(843): m=1, l=14, x=13484, y=10180
+09-05 13:10:07.070: I/tile(843): m=1, l=14, x=13486, y=10180
+09-05 13:10:07.080: I/tile(843): reset needDrawTiles
+09-05 13:10:07.090: I/tile(843): m=1, l=14, x=13485, y=10181
+09-05 13:10:07.100: I/tile(843): m=1, l=14, x=13484, y=10181
+09-05 13:10:07.150: I/tile(843): reset needDrawTiles
+09-05 13:10:07.150: I/tile(843): m=1, l=14, x=13486, y=10181
+09-05 13:10:07.190: I/tile(843): reset needDrawTiles
+09-05 13:10:07.230: I/tile(843): m=1, l=14, x=13484, y=10178
+09-05 13:10:07.240: I/tile(843): m=1, l=14, x=13485, y=10178
+09-05 13:10:07.250: I/tile(843): m=1, l=14, x=13484, y=10182
+09-05 13:10:07.260: I/tile(843): m=1, l=14, x=13485, y=10182
+09-05 13:10:07.270: I/tile(843): m=1, l=14, x=13486, y=10182
+09-05 13:10:07.420: I/tile(843): reset needDrawTiles
+09-05 13:10:07.450: I/tile(843): reset needDrawTiles
+09-05 13:10:07.510: I/tile(843): reset needDrawTiles
+09-05 13:10:07.560: I/tile(843): reset needDrawTiles
+09-05 13:10:17.420: I/tile(843): reset needDrawTiles
+09-05 13:10:17.430: I/tile(843): reset needDrawTiles
+09-05 13:10:17.470: I/tile(843): reset needDrawTiles
+09-05 13:10:17.520: I/tile(843): reset needDrawTiles
+09-05 13:10:17.570: I/tile(843): reset needDrawTiles
+09-05 13:10:17.620: I/tile(843): reset needDrawTiles
+09-05 13:10:17.670: I/tile(843): reset needDrawTiles
+09-05 13:10:17.720: I/tile(843): reset needDrawTiles
+09-05 13:12:40.540: I/tile(843): reset needDrawTiles
+09-05 13:12:40.600: I/tile(843): reset needDrawTiles
+09-05 13:12:40.620: I/tile(843): reset needDrawTiles
+09-05 13:12:40.640: I/tile(843): m=1, l=14, x=13487, y=10179
+09-05 13:12:40.640: I/tile(843): reset needDrawTiles
+09-05 13:12:40.680: I/tile(843): m=1, l=14, x=13487, y=10180
+09-05 13:12:40.680: I/tile(843): reset needDrawTiles
+09-05 13:12:40.690: I/tile(843): m=1, l=14, x=13487, y=10181
+09-05 13:12:40.710: I/tile(843): reset needDrawTiles
+09-05 13:12:40.720: I/tile(843): reset needDrawTiles
+09-05 13:12:40.720: I/tile(843): m=1, l=14, x=13488, y=10179
+09-05 13:12:40.730: I/tile(843): m=1, l=14, x=13488, y=10180
+09-05 13:12:40.740: I/tile(843): reset needDrawTiles
+09-05 13:12:40.750: I/tile(843): m=1, l=14, x=13488, y=10178
+09-05 13:12:40.760: I/tile(843): m=1, l=14, x=13486, y=10177
+09-05 13:12:40.760: I/tile(843): reset needDrawTiles
+09-05 13:12:40.770: I/tile(843): m=1, l=14, x=13488, y=10181
+09-05 13:12:40.780: I/tile(843): reset needDrawTiles
+09-05 13:12:40.790: I/tile(843): reset needDrawTiles
+09-05 13:12:40.790: I/tile(843): reset needDrawTiles
+09-05 13:12:40.790: I/tile(843): m=1, l=14, x=13489, y=10179
+09-05 13:12:40.810: I/tile(843): m=1, l=14, x=13489, y=10180
+09-05 13:12:40.810: I/tile(843): reset needDrawTiles
+09-05 13:12:40.830: I/tile(843): m=1, l=14, x=13489, y=10178
+09-05 13:12:40.830: I/tile(843): reset needDrawTiles
+09-05 13:12:40.840: I/tile(843): reset needDrawTiles
+09-05 13:12:40.850: I/tile(843): reset needDrawTiles
+09-05 13:12:40.860: I/tile(843): reset needDrawTiles
+09-05 13:12:40.880: I/tile(843): reset needDrawTiles
+09-05 13:12:40.890: I/tile(843): reset needDrawTiles
+09-05 13:12:40.890: I/tile(843): m=1, l=14, x=13490, y=10178
+09-05 13:12:40.900: I/tile(843): m=1, l=14, x=13490, y=10179
+09-05 13:12:40.920: I/tile(843): reset needDrawTiles
+09-05 13:12:40.920: I/tile(843): m=1, l=14, x=13490, y=10177
+09-05 13:12:40.930: I/tile(843): m=1, l=14, x=13490, y=10180
+09-05 13:12:40.940: I/tile(843): reset needDrawTiles
+09-05 13:12:40.960: I/tile(843): reset needDrawTiles
+09-05 13:12:40.960: I/tile(843): reset needDrawTiles
+09-05 13:12:40.980: I/tile(843): reset needDrawTiles
+09-05 13:12:40.990: I/tile(843): reset needDrawTiles
+09-05 13:12:41.010: I/tile(843): reset needDrawTiles
+09-05 13:12:41.030: I/tile(843): reset needDrawTiles
+09-05 13:12:41.040: I/tile(843): reset needDrawTiles
+09-05 13:12:41.060: I/tile(843): reset needDrawTiles
+09-05 13:12:41.090: I/tile(843): reset needDrawTiles
+09-05 13:12:41.100: I/tile(843): reset needDrawTiles
+09-05 13:12:41.110: I/tile(843): reset needDrawTiles
+09-05 13:12:41.130: I/tile(843): reset needDrawTiles
+09-05 13:12:41.140: I/tile(843): reset needDrawTiles
+09-05 13:12:41.160: I/tile(843): reset needDrawTiles
+09-05 13:12:42.510: I/tile(843): reset needDrawTiles
+09-05 13:12:42.560: I/tile(843): m=1, l=14, x=13491, y=10178
+09-05 13:12:42.570: I/tile(843): reset needDrawTiles
+09-05 13:12:42.600: I/tile(843): m=1, l=14, x=13491, y=10179
+09-05 13:12:42.610: I/tile(843): reset needDrawTiles
+09-05 13:12:42.620: I/tile(843): m=1, l=14, x=13491, y=10177
+09-05 13:12:42.630: I/tile(843): m=1, l=14, x=13490, y=10176
+09-05 13:12:42.650: I/tile(843): m=1, l=14, x=13491, y=10176
+09-05 13:12:42.650: I/tile(843): reset needDrawTiles
+09-05 13:12:42.660: I/tile(843): m=1, l=14, x=13492, y=10178
+09-05 13:12:42.700: I/tile(843): m=1, l=14, x=13492, y=10179
+09-05 13:12:42.700: I/tile(843): reset needDrawTiles
+09-05 13:12:42.720: I/tile(843): m=1, l=14, x=13492, y=10177
+09-05 13:12:42.730: I/tile(843): m=1, l=14, x=13492, y=10176
+09-05 13:12:42.750: I/tile(843): reset needDrawTiles
+09-05 13:12:42.760: I/tile(843): reset needDrawTiles
+09-05 13:12:42.770: I/tile(843): reset needDrawTiles
+09-05 13:12:42.770: I/tile(843): reset needDrawTiles
+09-05 13:12:42.790: I/tile(843): reset needDrawTiles
+09-05 13:12:42.800: I/tile(843): reset needDrawTiles
+09-05 13:12:42.810: I/tile(843): m=1, l=14, x=13493, y=10178
+09-05 13:12:42.810: I/tile(843): m=1, l=14, x=13493, y=10179
+09-05 13:12:42.830: I/tile(843): m=1, l=14, x=13493, y=10177
+09-05 13:12:42.830: I/tile(843): reset needDrawTiles
+09-05 13:12:42.850: I/tile(843): m=1, l=14, x=13493, y=10176
+09-05 13:12:42.860: I/tile(843): reset needDrawTiles
+09-05 13:12:42.870: I/tile(843): reset needDrawTiles
+09-05 13:12:42.870: I/tile(843): reset needDrawTiles
+09-05 13:12:42.880: I/tile(843): reset needDrawTiles
+09-05 13:12:42.890: I/tile(843): reset needDrawTiles
+09-05 13:12:42.910: I/tile(843): reset needDrawTiles
+09-05 13:12:42.920: I/tile(843): reset needDrawTiles
+09-05 13:12:42.940: I/tile(843): reset needDrawTiles
+09-05 13:12:42.960: I/tile(843): reset needDrawTiles
+09-05 13:12:42.970: I/tile(843): reset needDrawTiles
+09-05 13:12:42.980: I/tile(843): reset needDrawTiles
+09-05 13:12:43.000: I/tile(843): reset needDrawTiles
+09-05 13:12:43.020: I/tile(843): reset needDrawTiles
+09-05 13:12:43.020: I/tile(843): m=1, l=14, x=13494, y=10178
+09-05 13:12:43.030: I/tile(843): m=1, l=14, x=13494, y=10179
+09-05 13:12:43.040: I/tile(843): m=1, l=14, x=13494, y=10177
+09-05 13:12:43.040: I/tile(843): reset needDrawTiles
+09-05 13:12:43.040: I/tile(843): m=1, l=14, x=13494, y=10176
+09-05 13:12:43.060: I/tile(843): reset needDrawTiles
+09-05 13:12:43.070: I/tile(843): reset needDrawTiles
+09-05 13:12:43.080: I/tile(843): reset needDrawTiles
+09-05 13:12:43.100: I/tile(843): reset needDrawTiles
+09-05 13:12:43.120: I/tile(843): reset needDrawTiles
+09-05 13:12:46.470: I/tile(843): reset needDrawTiles
+09-05 13:12:46.520: I/tile(843): reset needDrawTiles
+09-05 13:12:46.550: I/tile(843): reset needDrawTiles
+09-05 13:12:46.570: I/tile(843): reset needDrawTiles
+09-05 13:12:46.570: I/tile(843): m=1, l=14, x=13495, y=10178
+09-05 13:12:46.580: I/tile(843): reset needDrawTiles
+09-05 13:12:46.580: I/tile(843): m=1, l=14, x=13495, y=10179
+09-05 13:12:46.590: I/tile(843): reset needDrawTiles
+09-05 13:12:46.590: I/tile(843): m=1, l=14, x=13495, y=10177
+09-05 13:12:46.610: I/tile(843): m=1, l=14, x=13495, y=10176
+09-05 13:12:46.610: I/tile(843): reset needDrawTiles
+09-05 13:12:46.630: I/tile(843): reset needDrawTiles
+09-05 13:12:46.630: I/tile(843): reset needDrawTiles
+09-05 13:12:46.640: I/tile(843): m=1, l=14, x=13496, y=10177
+09-05 13:12:46.640: I/tile(843): m=1, l=14, x=13496, y=10178
+09-05 13:12:46.650: I/tile(843): reset needDrawTiles
+09-05 13:12:46.650: I/tile(843): m=1, l=14, x=13496, y=10176
+09-05 13:12:46.660: I/tile(843): reset needDrawTiles
+09-05 13:12:46.670: I/tile(843): m=1, l=14, x=13496, y=10179
+09-05 13:12:46.680: I/tile(843): reset needDrawTiles
+09-05 13:12:46.690: I/tile(843): reset needDrawTiles
+09-05 13:12:46.690: I/tile(843): m=1, l=11, x=1687, y=1272
+09-05 13:12:46.720: I/tile(843): reset needDrawTiles
+09-05 13:12:46.720: I/tile(843): m=1, l=14, x=13497, y=10177
+09-05 13:12:46.720: I/tile(843): m=1, l=14, x=13497, y=10178
+09-05 13:12:46.730: I/tile(843): reset needDrawTiles
+09-05 13:12:46.740: I/tile(843): m=1, l=14, x=13497, y=10176
+09-05 13:12:46.760: I/tile(843): reset needDrawTiles
+09-05 13:12:46.760: I/tile(843): m=1, l=14, x=13497, y=10179
+09-05 13:12:46.760: I/tile(843): reset needDrawTiles
+09-05 13:12:46.780: I/tile(843): reset needDrawTiles
+09-05 13:12:46.780: I/tile(843): reset needDrawTiles
+09-05 13:12:46.790: I/tile(843): reset needDrawTiles
+09-05 13:12:46.790: I/tile(843): m=1, l=14, x=13498, y=10177
+09-05 13:12:46.800: I/tile(843): m=1, l=14, x=13498, y=10178
+09-05 13:12:46.800: I/tile(843): m=1, l=14, x=13498, y=10176
+09-05 13:12:46.820: I/tile(843): reset needDrawTiles
+09-05 13:12:46.820: I/tile(843): m=1, l=14, x=13498, y=10179
+09-05 13:12:46.830: I/tile(843): reset needDrawTiles
+09-05 13:12:46.840: I/tile(843): reset needDrawTiles
+09-05 13:12:46.850: I/tile(843): reset needDrawTiles
+09-05 13:12:46.870: I/tile(843): reset needDrawTiles
+09-05 13:12:46.890: I/tile(843): reset needDrawTiles
+09-05 13:12:46.900: I/tile(843): reset needDrawTiles
+09-05 13:12:46.920: I/tile(843): reset needDrawTiles
+09-05 13:12:46.940: I/tile(843): reset needDrawTiles
+09-05 13:12:46.960: I/tile(843): reset needDrawTiles
+09-05 13:12:46.960: I/tile(843): m=1, l=14, x=13499, y=10177
+09-05 13:12:46.960: I/tile(843): m=1, l=14, x=13499, y=10178
+09-05 13:12:46.970: I/tile(843): m=1, l=14, x=13499, y=10176
+09-05 13:12:46.980: I/tile(843): m=1, l=14, x=13499, y=10179
+09-05 13:12:46.980: I/tile(843): reset needDrawTiles
+09-05 13:12:46.990: I/tile(843): reset needDrawTiles
+09-05 13:12:47.000: I/tile(843): reset needDrawTiles
+09-05 13:12:47.020: I/tile(843): reset needDrawTiles
+09-05 13:12:47.030: I/tile(843): reset needDrawTiles
+09-05 13:12:47.050: I/tile(843): reset needDrawTiles
+09-05 13:12:47.070: I/tile(843): reset needDrawTiles
+09-05 13:12:47.090: I/tile(843): reset needDrawTiles
+09-05 13:13:03.520: I/tile(843): reset needDrawTiles
+09-05 13:13:03.570: I/tile(843): reset needDrawTiles
+09-05 13:13:03.580: I/tile(843): reset needDrawTiles
+09-05 13:13:03.620: I/tile(843): reset needDrawTiles
+09-05 13:13:03.640: I/tile(843): m=1, l=14, x=13500, y=10178
+09-05 13:13:03.650: I/tile(843): reset needDrawTiles
+09-05 13:13:03.660: I/tile(843): m=1, l=14, x=13500, y=10179
+09-05 13:13:03.670: I/tile(843): m=1, l=14, x=13500, y=10177
+09-05 13:13:03.670: I/tile(843): reset needDrawTiles
+09-05 13:13:03.670: I/tile(843): m=1, l=14, x=13498, y=10180
+09-05 13:13:03.680: I/tile(843): m=1, l=14, x=13499, y=10180
+09-05 13:13:03.680: I/tile(843): reset needDrawTiles
+09-05 13:13:03.690: I/tile(843): m=1, l=14, x=13500, y=10180
+09-05 13:13:03.690: I/tile(843): reset needDrawTiles
+09-05 13:13:03.700: I/tile(843): reset needDrawTiles
+09-05 13:13:03.700: I/tile(843): m=1, l=14, x=13499, y=10181
+09-05 13:13:03.700: I/tile(843): m=1, l=14, x=13500, y=10181
+09-05 13:13:03.710: I/tile(843): reset needDrawTiles
+09-05 13:13:03.710: I/tile(843): m=1, l=14, x=13501, y=10179
+09-05 13:13:03.710: I/tile(843): m=1, l=14, x=13501, y=10180
+09-05 13:13:03.720: I/tile(843): m=1, l=14, x=13501, y=10178
+09-05 13:13:03.730: I/tile(843): reset needDrawTiles
+09-05 13:13:03.730: I/tile(843): m=1, l=14, x=13501, y=10181
+09-05 13:13:03.740: I/tile(843): reset needDrawTiles
+09-05 13:13:03.750: I/tile(843): reset needDrawTiles
+09-05 13:13:03.770: I/tile(843): reset needDrawTiles
+09-05 13:13:03.780: I/tile(843): reset needDrawTiles
+09-05 13:13:03.780: I/tile(843): m=1, l=14, x=13499, y=10182
+09-05 13:13:03.790: I/tile(843): m=1, l=14, x=13500, y=10182
+09-05 13:13:03.800: I/tile(843): reset needDrawTiles
+09-05 13:13:03.810: I/tile(843): m=1, l=14, x=13501, y=10182
+09-05 13:13:03.810: I/tile(843): reset needDrawTiles
+09-05 13:13:03.830: I/tile(843): reset needDrawTiles
+09-05 13:13:03.830: I/tile(843): m=1, l=14, x=13502, y=10180
+09-05 13:13:03.830: I/tile(843): m=1, l=14, x=13502, y=10181
+09-05 13:13:03.840: I/tile(843): m=1, l=14, x=13502, y=10179
+09-05 13:13:03.840: I/tile(843): m=1, l=14, x=13502, y=10182
+09-05 13:13:03.850: I/tile(843): reset needDrawTiles
+09-05 13:13:03.860: I/tile(843): reset needDrawTiles
+09-05 13:13:03.870: I/tile(843): reset needDrawTiles
+09-05 13:13:03.890: I/tile(843): reset needDrawTiles
+09-05 13:13:03.910: I/tile(843): reset needDrawTiles
+09-05 13:13:03.910: I/tile(843): m=1, l=14, x=13500, y=10183
+09-05 13:13:03.960: I/tile(843): m=1, l=14, x=13501, y=10183
+09-05 13:13:03.960: I/tile(843): reset needDrawTiles
+09-05 13:13:03.970: I/tile(843): m=1, l=14, x=13502, y=10183
+09-05 13:13:03.970: I/tile(843): reset needDrawTiles
+09-05 13:13:03.980: I/tile(843): reset needDrawTiles
+09-05 13:13:03.980: I/tile(843): reset needDrawTiles
+09-05 13:13:04.000: I/tile(843): reset needDrawTiles
+09-05 13:13:04.010: I/tile(843): reset needDrawTiles
+09-05 13:13:04.030: I/tile(843): reset needDrawTiles
+09-05 13:13:04.040: I/tile(843): reset needDrawTiles
+09-05 13:13:04.060: I/tile(843): reset needDrawTiles
+09-05 13:13:04.070: I/tile(843): reset needDrawTiles
+09-05 13:13:04.070: I/tile(843): m=1, l=14, x=13503, y=10182
+09-05 13:13:04.080: I/tile(843): m=1, l=14, x=13503, y=10183
+09-05 13:13:04.110: I/tile(843): m=1, l=14, x=13503, y=10181
+09-05 13:13:04.110: I/tile(843): reset needDrawTiles
+09-05 13:13:04.110: I/tile(843): m=1, l=14, x=13503, y=10180
+09-05 13:13:04.120: I/tile(843): reset needDrawTiles
+09-05 13:13:04.120: I/tile(843): reset needDrawTiles
+09-05 13:13:04.130: I/tile(843): reset needDrawTiles
+09-05 13:13:04.150: I/tile(843): reset needDrawTiles
+09-05 13:13:04.170: I/tile(843): reset needDrawTiles

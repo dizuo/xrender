@@ -1,0 +1,56 @@
+opengl vector render
+
++ context_creat
++ context_destroy
+
++ set_pen_style : dashed, normal
++ set_pen_color
++ set_brush_style
++ set_brush_color
+
++ render_line
++ render_polyline
+
++ render_polygon
++ render_rectangle
+
++ render_text
+
+计划：
+1. 先绘制底图，验证render region / line 可行性
+2. 集成fbo render
+
+
+NOTE
+缺少的背景区域 是有名区域。NameAreaRegionLayer
+
+1 NameAreaRegionLayer
+2 RegionLayer
+3 LineLayer
+
+=====================================未来工作=====================================
+
+1. 根据道路颜色 生成道路纹理，里面包含16*16个不同颜色的纹理。
+与set_pen_color 对应
+
+2. 实现opengl_vector_render接口，对有名区域，普通区域，道路 分类进行延迟渲染。
+最终都是 GL_TRIANGLES方式，达到一个阈值 一次draw call
+模版缓冲区、互补遮挡区域，批量绘制。
+
+绘制icon / bitmap 更加方便
+
+3. 集成fbo环境
+
+4. 集成到引擎 map_render组件中
+先只处理普通底图
+
+5. 打包到手机上。
+
+=====================================未来工作======================================
+
+FBO下stencil 配置不正确，吐血。。。
+
+
+
+
+
