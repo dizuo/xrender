@@ -10,6 +10,9 @@
 static float rotAngle = 0.0f;
 static float skewAngle = 0.0f;
 
+const float RotMax = 40.0f;
+const float Delta = 2.0f;
+
 int frameIdx = 0;
 int frameNum = 100;
 
@@ -58,23 +61,44 @@ void keyboard(unsigned char key, int x, int y)
 		break;
 
 	case 'r':
-		rotAngle += 3.0f;
+		if (rotAngle < RotMax)
+		{
+			rotAngle += Delta;
+		}
 		break;
 	case 'R':
-		rotAngle -= 3.0f;
+		if (rotAngle > 0)
+		{
+			rotAngle -= Delta;
+		}
 		break;
 	case 's':
-		if (skewAngle < 45)
+		if (skewAngle < RotMax)
 		{
-			skewAngle += 3.0f;
+			skewAngle += Delta;
 		}
 		break;
 	case 'S':
-		if (skewAngle > 3.0f)
+		if (skewAngle > 0)
 		{
-			skewAngle -= 3.0f;
+			skewAngle -= Delta;
 		}
 		break;
+	case 'z':
+		if (skewAngle < RotMax)
+		{
+			skewAngle += Delta;
+			rotAngle += Delta;
+		}
+		break;
+	case 'Z':
+		if (skewAngle > 0)
+		{
+			skewAngle -= Delta;
+			rotAngle -= Delta;
+		}
+		break;
+
 	}
 	
 	glutPostRedisplay();
@@ -112,29 +136,105 @@ void renderAxisBoudingLabel(float x, float y, float z)
 	glPushMatrix();
 	{
 		glTranslatef(x, y, z);
-		glRotatef(skewAngle, 1,0,0);
 		glRotatef(rotAngle, 0,0,1);
+		glRotatef(skewAngle, 1,0,0);
 		glScalef(0.5, 0.25, 0.01);
 		glColor3f(1,0,0);
 		glutSolidCube(1);
 	} glPopMatrix();
 }
 
+void testRenderRotateLabel()
+{
+	const float angle = RotMax;
+
+	glPushMatrix();
+	{
+		glRotatef(rotAngle, 0,0,-1);
+
+		glPushMatrix();
+		glScalef(0.5, 0.25, 0.01);
+		glColor3f(1,0,0);
+		glutSolidCube(1);
+		glPopMatrix();
+
+		glTranslatef(0.5, 1, 0);
+		glRotatef(angle, 0,0,1);
+		glScalef(0.5, 0.25, 0.01);
+		glColor3f(1,0,0);
+		glutSolidCube(1);
+	} glPopMatrix();
+}
+
+void testRenderLabel()
+{
+	const float angle = RotMax;
+
+	glPushMatrix();
+	{
+		glRotatef(skewAngle, -1,0,0);
+		glRotatef(rotAngle, 0,0,-1);
+
+		glPushMatrix();
+		glScalef(0.5, 0.25, 0.01);
+		glColor3f(1,0,0);
+		glutSolidCube(1);
+		glPopMatrix();
+
+		glTranslatef(0.5, 1, 0);
+		glRotatef(angle, 0,0,1);
+		glRotatef(angle, 1,0,0);
+		glScalef(0.5, 0.25, 0.01);
+		glColor3f(1,0,0);
+		glutSolidCube(1);
+	} glPopMatrix();
+}
+
+void testRenderSkewLabel()
+{
+	const float angle = RotMax;
+
+	glPushMatrix();
+	{
+		glRotatef(skewAngle, -1,0,0);
+
+		glPushMatrix();
+		glScalef(0.5, 0.25, 0.01);
+		glColor3f(1,0,0);
+		glutSolidCube(1);
+		glPopMatrix();
+
+		glTranslatef(0.5, 1, 0);
+		glRotatef(angle, 1,0,0);
+		glScalef(0.5, 0.25, 0.01);
+		glColor3f(1,0,0);
+		glutSolidCube(1);
+	} glPopMatrix();
+}
+
+
 void display(void)
 {
 	glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
     glColor3f (1.0, 1.0, 1.0);  // 清屏幕颜色
 
-	renderAxisBoudingLabel(1.0f, -0.5f, 0.7f);
-	renderAxisBoudingLabel(-1.0f, 0.5f, -0.5f);
-
 	glPushMatrix();
 	{
-		glRotatef(skewAngle, -1, 0, 0);
-		glRotatef(rotAngle, 0,0, -1);
+		// testRenderRotateLabel();	// 单独rotate
+		// testRenderSkewLabel();	// 单独skew
+		// testRenderLabel();			// 测试综合情况
+	} glPopMatrix();
+ 
+ 	glPushMatrix();
+ 	{
+ 		glRotatef(skewAngle, -1, 0, 0);
+ 		glRotatef(rotAngle, 0,0, -1);
+ 
+ 		renderBaseMap();
 
-		renderBaseMap();
-
+		renderAxisBoudingLabel(1.0f, -0.5f, 0.7f);
+		renderAxisBoudingLabel(-1.0f, 0.5f, -0.5f);
+ 
 	} glPopMatrix();
 
 /*
