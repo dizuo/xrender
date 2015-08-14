@@ -24,6 +24,8 @@
 #include "tga.h"
 #include "resource.h"
 
+#include "soil/soil.h"
+
 //-----------------------------------------------------------------------------
 // GLOBALS
 //-----------------------------------------------------------------------------
@@ -33,7 +35,6 @@ HGLRC  g_hRC       = NULL;
 GLuint g_textureID = -1;
 
 bool g_bBlending = true;
-bool g_bSortUsingCullModeTrick = true;
 
 float g_fDistance = -4.5f;
 float g_fSpinX    = 0.0f;
@@ -41,23 +42,25 @@ float g_fSpinY    = 0.0f;
 
 struct Vertex
 {
-    float tu, tv;
-    float x, y, z;
+	float tu, tv;
+	float x, y, z;
 };
 
 int g_vertexCount = 4;
-float g_quadWid = 0.2f;
+float g_quadWid = 0.4f;
 float g_quadHgh = 2.0f;
-float g_textureU = 1.0f;
-float g_textureV = 2.0f;
 float g_arrowSpeed = 0.01f;
+
+float g_texSize = 64.0f;
+float g_texUOff = 34.0f / g_texSize;
+float g_texVOff = 1 - 49.0f / g_texSize;
 
 Vertex g_quadVertices[] =
 {
-    { 0.0f,0.0f, -g_quadWid/2,-g_quadHgh/2, 0.0f },
-    { g_textureU,0.0f,  g_quadWid/2,-g_quadHgh/2, 0.0f },
-    { g_textureU,g_textureV,  g_quadWid/2, g_quadHgh/2, 0.0f },
-    { 0.0f,g_textureV, -g_quadWid/2, g_quadHgh/2, 0.0f }
+	{ 0.0f,1.0f, -g_quadWid/2,-g_quadHgh/2, 0.0f },
+	{ g_texUOff,1.0f,  g_quadWid/2,-g_quadHgh/2, 0.0f },
+	{ g_texUOff, g_texVOff,  g_quadWid/2, g_quadHgh/2, 0.0f },
+	{ 0.0f,g_texVOff, -g_quadWid/2, g_quadHgh/2, 0.0f }
 };
 
 //-----------------------------------------------------------------------------
@@ -76,41 +79,41 @@ void shutDown(void);
 // Desc: The application's entry point
 //-----------------------------------------------------------------------------
 int WINAPI WinMain(	HINSTANCE hInstance,
-					HINSTANCE hPrevInstance,
-					LPSTR     lpCmdLine,
-					int       nCmdShow )
+				   HINSTANCE hPrevInstance,
+				   LPSTR     lpCmdLine,
+				   int       nCmdShow )
 {
 	WNDCLASSEX winClass; 
 	MSG        uMsg;
 
-    memset(&uMsg,0,sizeof(uMsg));
+	memset(&uMsg,0,sizeof(uMsg));
 
 	winClass.lpszClassName = "MY_WINDOWS_CLASS";
 	winClass.cbSize        = sizeof(WNDCLASSEX);
 	winClass.style         = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
 	winClass.lpfnWndProc   = WindowProc;
 	winClass.hInstance     = hInstance;
-    winClass.hIcon	       = LoadIcon(hInstance, (LPCTSTR)IDI_OPENGL_ICON);
-    winClass.hIconSm	   = LoadIcon(hInstance, (LPCTSTR)IDI_OPENGL_ICON);
+	winClass.hIcon	       = LoadIcon(hInstance, (LPCTSTR)IDI_OPENGL_ICON);
+	winClass.hIconSm	   = LoadIcon(hInstance, (LPCTSTR)IDI_OPENGL_ICON);
 	winClass.hCursor       = LoadCursor(NULL, IDC_ARROW);
 	winClass.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
 	winClass.lpszMenuName  = NULL;
 	winClass.cbClsExtra    = 0;
 	winClass.cbWndExtra    = 0;
-	
+
 	if( !RegisterClassEx(&winClass) )
 		return E_FAIL;
 
 	g_hWnd = CreateWindowEx( NULL, "MY_WINDOWS_CLASS", 
-                             "OpenGL - Texture UV Animation",
-						     WS_OVERLAPPEDWINDOW | WS_VISIBLE,
-					         0, 0, 640, 480, NULL, NULL, hInstance, NULL );
+		"OpenGL - Texture UV Animation",
+		WS_OVERLAPPEDWINDOW | WS_VISIBLE,
+		0, 0, 640, 480, NULL, NULL, hInstance, NULL );
 
 	if( g_hWnd == NULL )
 		return E_FAIL;
 
-    ShowWindow( g_hWnd, nCmdShow );
-    UpdateWindow( g_hWnd );
+	ShowWindow( g_hWnd, nCmdShow );
+	UpdateWindow( g_hWnd );
 
 	init();
 
@@ -121,13 +124,13 @@ int WINAPI WinMain(	HINSTANCE hInstance,
 			TranslateMessage( &uMsg );
 			DispatchMessage( &uMsg );
 		}
-        else
-            render();
+		else
+			render();
 	}
 
 	shutDown();
 
-    UnregisterClass( "MY_WINDOWS_CLASS", winClass.hInstance );
+	UnregisterClass( "MY_WINDOWS_CLASS", winClass.hInstance );
 
 	return uMsg.wParam;
 }
@@ -137,67 +140,66 @@ int WINAPI WinMain(	HINSTANCE hInstance,
 // Desc: The window's message handler
 //-----------------------------------------------------------------------------
 LRESULT CALLBACK WindowProc( HWND   hWnd, 
-							 UINT   msg, 
-							 WPARAM wParam, 
-							 LPARAM lParam )
+							UINT   msg, 
+							WPARAM wParam, 
+							LPARAM lParam )
 {
-    static POINT ptLastMousePosit;
-    static POINT ptCurrentMousePosit;
-    static bool bMousing;
+	static POINT ptLastMousePosit;
+	static POINT ptCurrentMousePosit;
+	static bool bMousing;
 
-    switch( msg )
+	switch( msg )
 	{
-        case WM_CHAR:
+	case WM_CHAR:
 		{
 			switch( wParam )
 			{
-                case 'b':
-                case 'B':
-                    g_bBlending = !g_bBlending;
-                    break;
+			case 'b':
+			case 'B':
+				g_bBlending = !g_bBlending;
+				break;
 
-                case 's':
-                case 'S':
-                    g_bSortUsingCullModeTrick = !g_bSortUsingCullModeTrick;
-                    break;
-            }
-        }
-        break;
-
-        case WM_KEYDOWN:
-		{
-			switch( wParam )
-			{
-				case VK_ESCAPE:
-					PostQuitMessage(0);
-					break;
-
-                case 38: // Up Arrow Key
-                    g_fDistance -= 0.1f;
-                    break;
-
-                case 40: // Down Arrow Key
-                    g_fDistance += 0.1f;
-                    break;
+			case 's':
+			case 'S':
+				break;
 			}
 		}
-        break;
+		break;
 
-        case WM_LBUTTONDOWN:
+	case WM_KEYDOWN:
+		{
+			switch( wParam )
+			{
+			case VK_ESCAPE:
+				PostQuitMessage(0);
+				break;
+
+			case 38: // Up Arrow Key
+				g_fDistance -= 0.1f;
+				break;
+
+			case 40: // Down Arrow Key
+				g_fDistance += 0.1f;
+				break;
+			}
+		}
+		break;
+
+	case WM_LBUTTONDOWN:
 		{
 			ptLastMousePosit.x = ptCurrentMousePosit.x = LOWORD (lParam);
-            ptLastMousePosit.y = ptCurrentMousePosit.y = HIWORD (lParam);
+			ptLastMousePosit.y = ptCurrentMousePosit.y = HIWORD (lParam);
 			bMousing = true;
 		}
 		break;
 
-		case WM_LBUTTONUP:
+	case WM_LBUTTONUP:
 		{
 			bMousing = false;
 		}
 		break;
 
-		case WM_MOUSEMOVE:
+	case WM_MOUSEMOVE:
 		{
 			ptCurrentMousePosit.x = LOWORD (lParam);
 			ptCurrentMousePosit.y = HIWORD (lParam);
@@ -207,13 +209,13 @@ LRESULT CALLBACK WindowProc( HWND   hWnd,
 				g_fSpinX -= (ptCurrentMousePosit.x - ptLastMousePosit.x);
 				g_fSpinY -= (ptCurrentMousePosit.y - ptLastMousePosit.y);
 			}
-			
+
 			ptLastMousePosit.x = ptCurrentMousePosit.x;
-            ptLastMousePosit.y = ptCurrentMousePosit.y;
+			ptLastMousePosit.y = ptCurrentMousePosit.y;
 		}
 		break;
 
-		case WM_SIZE:
+	case WM_SIZE:
 		{
 			int nWidth  = LOWORD(lParam); 
 			int nHeight = HIWORD(lParam);
@@ -225,19 +227,19 @@ LRESULT CALLBACK WindowProc( HWND   hWnd,
 		}
 		break;
 
-		case WM_CLOSE:
+	case WM_CLOSE:
 		{
 			PostQuitMessage(0);	
 		}
 		break;
 
-        case WM_DESTROY:
+	case WM_DESTROY:
 		{
-            PostQuitMessage(0);
+			PostQuitMessage(0);
 		}
-        break;
-		
-		default:
+		break;
+
+	default:
 		{
 			return DefWindowProc( hWnd, msg, wParam, lParam );
 		}
@@ -253,20 +255,30 @@ LRESULT CALLBACK WindowProc( HWND   hWnd,
 //-----------------------------------------------------------------------------
 void loadTexture( void )	
 {
-    tgaImageFile tgaImage;
-	tgaImage.load("arrow.tga");
+	unsigned char* buffer = NULL;
+	int width = 0;
+	int height = 0;
+	int channel = 0;
+	buffer = SOIL_load_image("road.png", &width, &height, &channel, 4);
 
-    glGenTextures( 1, &g_textureID );
+	// tgaImageFile tgaImage;
+	// tgaImage.load("arrow.tga");
 
-    glBindTexture( GL_TEXTURE_2D, g_textureID );
+	glGenTextures( 1, &g_textureID );
 
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
-    glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
+	glBindTexture( GL_TEXTURE_2D, g_textureID );
 
-    glTexImage2D( GL_TEXTURE_2D, 0, tgaImage.m_texFormat, 
-                  tgaImage.m_nImageWidth, tgaImage.m_nImageHeight, 
-                  0, tgaImage.m_texFormat, GL_UNSIGNED_BYTE, 
-                  tgaImage.m_nImageData );
+	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
+	glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
+	
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+	
+	free(buffer);
+
+// 	glTexImage2D( GL_TEXTURE_2D, 0, tgaImage.m_texFormat, 
+// 		tgaImage.m_nImageWidth, tgaImage.m_nImageHeight, 
+// 		0, tgaImage.m_texFormat, GL_UNSIGNED_BYTE, 
+// 		tgaImage.m_nImageData );
 }
 
 //-----------------------------------------------------------------------------
@@ -280,13 +292,13 @@ void init( void )
 	PIXELFORMATDESCRIPTOR pfd;
 	memset(&pfd, 0, sizeof(PIXELFORMATDESCRIPTOR));
 
-    pfd.nSize      = sizeof(PIXELFORMATDESCRIPTOR);
-    pfd.nVersion   = 1;
-    pfd.dwFlags    = PFD_DRAW_TO_WINDOW |PFD_SUPPORT_OPENGL | PFD_DOUBLEBUFFER;
-    pfd.iPixelType = PFD_TYPE_RGBA;
-    pfd.cColorBits = 16;
-    pfd.cDepthBits = 16;
-	
+	pfd.nSize      = sizeof(PIXELFORMATDESCRIPTOR);
+	pfd.nVersion   = 1;
+	pfd.dwFlags    = PFD_DRAW_TO_WINDOW |PFD_SUPPORT_OPENGL | PFD_DOUBLEBUFFER;
+	pfd.iPixelType = PFD_TYPE_RGBA;
+	pfd.cColorBits = 16;
+	pfd.cDepthBits = 16;
+
 	g_hDC = GetDC( g_hWnd );
 	PixelFormat = ChoosePixelFormat( g_hDC, &pfd );
 	SetPixelFormat( g_hDC, PixelFormat, &pfd);
@@ -309,7 +321,7 @@ void init( void )
 //-----------------------------------------------------------------------------
 void shutDown( void )
 {
-    glDeleteTextures( 1, &g_textureID );
+	glDeleteTextures( 1, &g_textureID );
 
 	if( g_hRC != NULL )
 	{
@@ -331,92 +343,49 @@ void shutDown( void )
 //-----------------------------------------------------------------------------
 void render( void )
 {
-    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+	glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
-    glMatrixMode( GL_MODELVIEW );
-    glLoadIdentity();
-    glTranslatef( 0.0f, 0.0f, g_fDistance );
-    glRotatef( -g_fSpinY, 1.0f, 0.0f, 0.0f );
-    glRotatef( -g_fSpinX, 0.0f, 1.0f, 0.0f );
-
-	for (int i=0; i<g_vertexCount; i++)
-	{
-		g_quadVertices[i].tv += g_arrowSpeed;
-	}
+	glMatrixMode( GL_MODELVIEW );
+	glLoadIdentity();
+	glTranslatef( 0.0f, 0.0f, g_fDistance );
+	glRotatef( -g_fSpinY, 1.0f, 0.0f, 0.0f );
+	glRotatef( -g_fSpinX, 0.0f, 1.0f, 0.0f );
 
 	if( g_bBlending == true )
 	{
-        //
-        // Use the texture's alpha channel to blend it with whatever抯 already 
-        // in the frame-buffer.
-        //
+		//
+		// Use the texture's alpha channel to blend it with whatever抯 already 
+		// in the frame-buffer.
+		//
 
 		glDisable( GL_DEPTH_TEST );
 
-        glEnable( GL_BLEND );
-        // glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA );
-		glBlendFunc( GL_SRC_COLOR, GL_ONE_MINUS_SRC_COLOR );		
+		glEnable( GL_BLEND );
+		
+		glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA );	 // 如果alpha值有效
+		
+		// glBlendFunc( GL_SRC_COLOR, GL_ONE_MINUS_SRC_COLOR );	// 使用图像RGB抠图
 
-        glBindTexture( GL_TEXTURE_2D, g_textureID );
+		glBindTexture( GL_TEXTURE_2D, g_textureID );
+	
+		glColor4f(1.0f, 0.0f, 0.0f, 1.0f);	// 实际混合为淡红色值
 
-        if( g_bSortUsingCullModeTrick == true )
-	    {
-            //
-            // Use the cull-mode sorting trick for convex non-overlapping 
-            // geometry.
-            //
-
-            glEnable( GL_CULL_FACE );
-
-            //
-            // Render the cube but only render the back-facing polygons.
-            //
-
-            glCullFace( GL_FRONT );
-
-            glInterleavedArrays( GL_T2F_V3F, 0, g_quadVertices );
-            glDrawArrays( GL_QUADS, 0, g_vertexCount );
-
-            //
-            // Render the cube again, but this time we only render the 
-            // front-facing polygons.
-            //
-
-            glCullFace( GL_BACK );
-
-            glInterleavedArrays( GL_T2F_V3F, 0, g_quadVertices );
-            glDrawArrays( GL_QUADS, 0, g_vertexCount );
-
-            glDisable( GL_CULL_FACE );
-        }
-        else
-        {
-            //
-            // Do no sorting and hope for the best. From certain viewing 
-            // positions the cube's sides will appear sorted correctly, but this
-            // is typically rare and the cube will not look right most of the 
-            // time.
-            //
-
-            glInterleavedArrays( GL_T2F_V3F, 0, g_quadVertices );
-            glDrawArrays( GL_QUADS, 0, g_vertexCount );
-        }
+		glInterleavedArrays( GL_T2F_V3F, 0, g_quadVertices );
+		glDrawArrays( GL_QUADS, 0, g_vertexCount );
 	}
 	else
 	{
-        //
-        // Render the cube, but do no blending...
-        //
+		//
+		// Render the cube, but do no blending...
+		//
 
 		glDisable( GL_BLEND );
 		glEnable( GL_DEPTH_TEST );
 
-        glBindTexture( GL_TEXTURE_2D, g_textureID );
-        glInterleavedArrays( GL_T2F_V3F, 0, g_quadVertices );
-        glDrawArrays( GL_QUADS, 0, g_vertexCount );
+		glBindTexture( GL_TEXTURE_2D, g_textureID );
+		glInterleavedArrays( GL_T2F_V3F, 0, g_quadVertices );
+		glDrawArrays( GL_QUADS, 0, g_vertexCount );
 	}
 
 	SwapBuffers( g_hDC );
-
-	Sleep(40);
 }

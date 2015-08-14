@@ -207,29 +207,29 @@
 			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 			>
 			<File
-				RelativePath=".\ogl_texture_uv_animation.cpp"
+				RelativePath=".\mipmap_app.cpp"
 				>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						Optimization="2"
-						PreprocessorDefinitions=""
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						Optimization="0"
-						PreprocessorDefinitions=""
-						BasicRuntimeChecks="3"
-						BrowseInformation="1"
-					/>
-				</FileConfiguration>
 			</File>
+			<Filter
+				Name="SOIL"
+				>
+				<File
+					RelativePath=".\soil\image_DXT.c"
+					>
+				</File>
+				<File
+					RelativePath=".\soil\image_helper.c"
+					>
+				</File>
+				<File
+					RelativePath=".\soil\SOIL.c"
+					>
+				</File>
+				<File
+					RelativePath=".\soil\stb_image_aug.c"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Resource Files"
