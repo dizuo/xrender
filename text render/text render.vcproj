@@ -184,7 +184,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\poi_test.cpp"
+				RelativePath=".\square_wave.cpp"
 				>
 			</File>
 		</Filter>

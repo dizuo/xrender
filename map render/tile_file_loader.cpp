@@ -68,7 +68,7 @@ int TileFileLoader::_parse_region_layer(std::ifstream& tile_file)
 		{
 			_region_layer_count++;
 			
-			continue;
+			break;
 		}
 
 		MapRegionLayer& region_layer = _region_layers[_road_layer_count];

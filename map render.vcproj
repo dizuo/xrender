@@ -172,6 +172,10 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\map render\map_tile_render_app.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\map render\opengl_vector_render.cpp"
 				>
 			</File>
@@ -190,30 +194,6 @@
 			<Filter
 				Name="road render"
 				>
-				<File
-					RelativePath=".\road render\opengl_fade_out_app.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\road render\qbase.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\road render\qbase.h"
-					>
-				</File>
-				<File
-					RelativePath=".\road render\qhelper.h"
-					>
-				</File>
-				<File
-					RelativePath=".\road render\qtriangulatingstroker.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\road render\qtriangulatingstroker.h"
-					>
-				</File>
 			</Filter>
 		</Filter>
 		<Filter

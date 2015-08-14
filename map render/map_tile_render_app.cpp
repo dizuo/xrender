@@ -124,9 +124,9 @@ scene_render (void)
 	if ( !g_loader.is_loaded() )
 	{
 		// 采用相对目录
-		// g_loader.load_dat_file("./resource/tile.dat");
+		g_loader.load_dat_file("./resource/tile.dat");
 		// g_loader.load_dat_file("resource/block1.dat");
-		g_loader.load_dat_file("resource/block.dat");
+		// g_loader.load_dat_file("resource/block.dat");
 	}
 
 	unsigned int texture_id = 0;
