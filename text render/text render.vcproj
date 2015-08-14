@@ -172,10 +172,6 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\2dobb_app.cpp"
-				>
-			</File>
-			<File
 				RelativePath=".\bitmap_fonts.h"
 				>
 			</File>
@@ -185,6 +181,10 @@
 			</File>
 			<File
 				RelativePath=".\pack\pack.h"
+				>
+			</File>
+			<File
+				RelativePath=".\poi_test.cpp"
 				>
 			</File>
 		</Filter>
