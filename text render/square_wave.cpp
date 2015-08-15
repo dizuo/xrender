@@ -7,19 +7,13 @@
 #include <cstdlib>
 #include <cmath>
 
+#include "controller.h"
+
 static float rotAngle = 0.0f;
 static float skewAngle = 0.0f;
 
 static float cameraZ = 7.0f;
 static float cameraY = 5.0f;
-
-typedef struct Item
-{
-	float pos[2];
-	float size[2];
-
-	float height;
-} item_t;
 
 item_t* g_seed_items = NULL;
 int	g_seed_num = 0;
@@ -147,11 +141,6 @@ void display(void)
 	//-----------------------------------------------------------------------------------------
 	// 3D perspective
 	//-----------------------------------------------------------------------------------------
-	
-	for (int seed_id = 0; seed_id < g_seed_num; seed_id++)
-	{
-		
-	}
 
 	glPushMatrix();
 	{

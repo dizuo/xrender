@@ -176,11 +176,11 @@
 				>
 			</File>
 			<File
-				RelativePath=".\pack\pack.cpp"
+				RelativePath=".\controller.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\pack\pack.h"
+				RelativePath=".\controller.h"
 				>
 			</File>
 			<File
