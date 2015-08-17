@@ -23,7 +23,7 @@ typedef union Vec2f
 } vec2f_t;
 
 void make_vec2(vec2f_t& vec, float x, float y);
-void make_vec2(vec3f_t& vec, float x, float y, float z);
+void make_vec3(vec3f_t& vec, float x, float y, float z);
 
 typedef struct Item
 {
@@ -33,14 +33,17 @@ typedef struct Item
 	float height;
 } item_t;
 
-class Controller
+class BatchRender
 {
 public:
-	
-	Controller() : vert_id(0), pvert_cache(0)
-	{}
-	
-	~Controller() 
+	BatchRender() : vert_id(0), pvert_cache(0)
+	{
+		color[0] = 1.0f;
+		color[1] = color[2] = 0.0f;
+		color[3] = 1.0f;
+	}
+
+	~BatchRender() 
 	{
 		if (pvert_cache)
 			delete [] pvert_cache;
@@ -48,16 +51,47 @@ public:
 		vert_id = 0;
 	}
 
-	void render_items(item_t* arr, int size);
+	void add_tri_to_cache(vec3f_t& p1, vec3f_t& p2, vec3f_t& p3);
+
+	void flush_tri_cache();
+
+	void init();
+
+	void set_color(float c[4]) { 
+		for (int k = 0; k < 4; k++) color[k] = c[k];
+	}
 
 private:
 
-	void _add_tri_to_cache(vec3f_t& p1, vec3f_t& p2, vec3f_t& p3);
-
-	void _flush_tri_cache();
-
 	vec3f_t* pvert_cache;
 	int vert_id;
+
+	float color[4];
+
+};
+
+class Controller
+{
+public:
+	
+	Controller()
+	{}
+	
+	~Controller() 
+	{
+	}
+
+	void product_items(item_t* & arr, int& size);
+
+	void render_items(item_t* arr, int size);
+
+	float get_rand_height();
+
+private:
+
+	BatchRender top_render;
+	BatchRender odd_render;
+	BatchRender even_render;
 
 };
 
