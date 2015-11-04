@@ -41,6 +41,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
+				AdditionalIncludeDirectories="../gtl/;../"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -172,10 +173,6 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
-				RelativePath=".\bitmap_fonts.h"
-				>
-			</File>
-			<File
 				RelativePath=".\controller.cpp"
 				>
 			</File>
@@ -184,7 +181,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\square_wave.cpp"
+				RelativePath=".\poly_render.cpp"
 				>
 			</File>
 		</Filter>

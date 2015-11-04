@@ -30,7 +30,7 @@ void BatchRender::init()
 {
 	if (pvert_cache == 0)
 	{
-		pvert_cache = new vec3f_t[MAX_CACHE_TRI_NUM];		
+		pvert_cache = new vec3f_t[MAX_CACHE_TRI_NUM];
 	}
 	vert_id = 0;
 }
@@ -102,7 +102,7 @@ void Controller::product_items(item_t* & arr, int& size)
 	float left = -xnum/2 * kStep + kRadius;
 	float top = -xnum/2 * kStep + kRadius;
 
-	float margin_factor = 1.0f;
+	float margin_factor = 1.2f;
 
 	if (arr)
 		delete[] arr;
